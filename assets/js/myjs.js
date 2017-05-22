@@ -2,9 +2,22 @@ $(document).ready(function() {
 	new WOW().init();
 
 	/* menu mobile slide */
-    // $(".nav-mobile").click(function(){
-    //     $("#headerweb .content").slideToggle();
-    // });
+    $(".nav-mobile").click(function(){
+        $("#headerweb .mainmenu").slideToggle();
+    });
+
+	$("#owl-demo").owlCarousel({
+		navigation : true,
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		items : 3, 
+        itemsDesktop : [1000,3], 
+        itemsTablet: [600,2], 
+        itemsMobile : [600,1],
+        navigationText : ["<i class='fa fa-angle-left'></i>" ,"<i class='fa fa-angle-right'></i>"],
+        autoPlay: false
+    });
+
 
 	// Does the browser actually support the video element?
 	var supportsVideo = !!document.createElement('video').canPlayType;
